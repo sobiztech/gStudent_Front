@@ -14,6 +14,7 @@ use App\Http\Controllers\FeesController;
 use App\Http\Controllers\GuardianTypeController;
 use App\Http\Controllers\GuardianController;
 use App\Http\Controllers\MediumController;
+use App\Http\Controllers\PropertyController;
 
 
 
@@ -84,3 +85,7 @@ Route::post('/guardian-add-process', [GuardianController::class, 'addProcess'])-
 // mediums
 Route::get('/mediums-showall', [MediumController::class, 'showall'])->name('mediums.showall');
 Route::post('/mediums-add-process', [MediumController::class, 'addProcess'])->name('mediums.addProcess');
+
+// property
+Route::get('/property-showall', [PropertyController::class, 'showall'])->name('property.showall');
+Route::post('/property-add-process', [PropertyController::class, 'addProcess'])->name('property.addProcess');
