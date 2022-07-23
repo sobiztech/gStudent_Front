@@ -5,8 +5,8 @@
                         <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar" href="#"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal " href="{{url('index')}}">
-                            <img src="{{asset('assets/images/brand/logo.png')}}" class="header-brand-img desktop-logo" alt="logo">
-                            <img src="{{asset('assets/images/brand/logo-3.png')}}" class="header-brand-img light-logo1"
+                            <img src="{{asset('/assets/images/brand/logo.png')}}" class="header-brand-img desktop-logo" alt="logo">
+                            <img src="{{asset('/assets/images/brand/logo-3.png')}}" class="header-brand-img light-logo1"
                                 alt="logo">
                         </a>
                         <!-- LOGO -->
@@ -56,7 +56,7 @@
                                         <!-- COUNTRY -->
                                         {{-- <div class="dropdown d-md-flex main-header-notification flag-dropdown">
                                             <a class="nav-link icon text-center country-nav-link" data-bs-target="#country-selector" data-bs-toggle="modal">
-												<img class="header-icons language" alt="" src="{{asset('assets/images/flags/us_flag.jpg')}}">
+												<img class="header-icons language" alt="" src="{{asset('/assets/images/flags/us_flag.jpg')}}">
 											</a>
                                         </div> --}}
                                         <!-- SEARCH -->
@@ -174,7 +174,7 @@
                                                 </div>
                                                 <div class="header-dropdown-list cart-menu ps4 overflow-hidden">
                                                     <a class="dropdown-item d-flex p-4" href="{{url('cart')}}">
-                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/ecommerce/1.jpg')}}"></span>
+                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/ecommerce/1.jpg')}}"></span>
                                                         <div class="wp-60 cart-desc mt-1">
                                                             <p class="fs-13 mb-0 lh-1 mb-1 text-dark fw-500">TrueBasket Metal Single Pot</p>
                                                             <p class="fs-12 fw-300 lh-1 mb-0">Status: <span class="text-green">In Stock</span></p>
@@ -187,7 +187,7 @@
                                                         </div>
                                                     </a>
 													<a class="dropdown-item d-flex p-4" href="{{url('cart')}}">
-                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/ecommerce/2.jpg')}}"></span>
+                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/ecommerce/2.jpg')}}"></span>
                                                         <div class="wp-60 cart-desc mt-1">
                                                             <p class="fs-13 mb-0 lh-1 mb-1 text-dark fw-500">Authentic chair with Canopy</p>
                                                             <p class="fs-12 fw-300 lh-1 mb-0">Status: <span class="text-green">In Stock</span></p>
@@ -200,7 +200,7 @@
                                                         </div>
                                                     </a>
 													<a class="dropdown-item d-flex p-4" href="{{url('cart')}}">
-                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/ecommerce/3.jpg')}}"></span>
+                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/ecommerce/3.jpg')}}"></span>
                                                         <div class="wp-60 cart-desc mt-1">
                                                             <p class="fs-13 mb-0 lh-1 mb-1 text-dark fw-500">Casual Sneakers Canvas</p>
                                                             <p class="fs-12 fw-300 lh-1 mb-0">Status: <span class="text-green">In Stock</span></p>
@@ -213,7 +213,7 @@
                                                         </div>
                                                     </a>
 													<a class="dropdown-item d-flex p-4" href="{{url('cart')}}">
-                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/ecommerce/4.jpg')}}"></span>
+                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/ecommerce/4.jpg')}}"></span>
                                                         <div class="wp-60 cart-desc mt-1">
                                                             <p class="fs-13 mb-0 lh-1 mb-1 text-dark fw-500">Branded Head Phones</p>
                                                             <p class="fs-12 fw-300 lh-1 mb-0">Status: <span class="text-danger">No Stock</span></p>
@@ -226,7 +226,7 @@
                                                         </div>
                                                     </a>
 													<a class="dropdown-item d-flex p-4" href="{{url('cart')}}">
-                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/ecommerce/5.jpg')}}"></span>
+                                                        <span class="avatar avatar-lg br-5 me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/ecommerce/5.jpg')}}"></span>
                                                         <div class="wp-60 cart-desc mt-1">
                                                             <p class="fs-13 mb-0 lh-1 mb-1 text-dark fw-500">camera lens (16mm f/1.4)</p>
                                                             <p class="fs-12 fw-300 lh-1 mb-0">Status: <span class="text-green">In Stock</span></p>
@@ -262,7 +262,7 @@
 												</div>
 												<div class="message-menu ps2 overflow-hidden">
 													<a class="dropdown-item d-flex" href="{{url('chat')}}">
-														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/users/1.jpg')}}"></span>
+														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/users/1.jpg')}}"></span>
 														<div class="wd-90p">
 															<div class="d-flex">
 																<h5 class="mb-1">Hawaii Hilton</h5>
@@ -272,7 +272,7 @@
 														</div>
 													</a>
 													<a class="dropdown-item d-flex" href="{{url('chat')}}">
-														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/users/15.jpg')}}">
+														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/users/15.jpg')}}">
 														</span>
 														<div class="wd-90p">
 															<div class="d-flex">
@@ -283,7 +283,7 @@
 														</div>
 													</a>
 													<a class="dropdown-item d-flex" href="{{url('chat')}}">
-														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/users/12.jpg')}}">
+														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/users/12.jpg')}}">
 														</span>
 														<div class="wd-90p">
 															<div class="d-flex">
@@ -294,7 +294,7 @@
 														</div>
 													</a>
 													<a class="dropdown-item d-flex" href="{{url('chat')}}">
-														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('assets/images/users/4.jpg')}}">
+														<span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="{{asset('/assets/images/users/4.jpg')}}">
 														</span>
 														<div class="wd-90p">
 															<div class="d-flex">
@@ -382,7 +382,7 @@
 										<div class="dropdown d-md-flex profile-1">
 											<a href="#" data-bs-toggle="dropdown" class="nav-link pe-2 leading-none d-flex animate">
 												<span>
-													<img src="{{asset('assets/images/faces/6.jpg')}}" alt="profile-user"
+													<img src="{{asset('/assets/images/faces/6.png')}}" alt="profile-user"
 														class="avatar  profile-user brround cover-image">
 												</span>
 												<div class="text-center p-1 d-flex d-lg-none-max">
