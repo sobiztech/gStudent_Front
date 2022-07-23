@@ -40,27 +40,25 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Branch Name</th>
-                                    <th>Branch Code</th>
                                     <th>Property Name</th>
+                                    <th>Property Code</th>
                                     <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($branches as $branch)
+                                @foreach ($properties as $property)
                                     <tr>
-                                        <td>{{ $branch['id'] }}</td>
-                                        <td>{{ $branch['branch_name'] }}</td>
-                                        <td>{{ $branch['branch_code'] }}</td>
-                                        <td>{{ $branch['property_name'] }}</td>
-                                        <td>{{ $branch['description'] }}</td>
+                                        <td>{{ $property['id'] }}</td>
+                                        <td>{{ $property['property_name'] }}</td>
+                                        <td>{{ $property['property_code'] }}</td>
+                                        <td>{{ $property['description'] }}</td>
                                         <td>
                                             <button class="modal-effect btn btn-secondary-gradient btn-pill btn-edit" title="Edit"
                                                 data-bs-effect="effect-sign" data-bs-toggle="modal"
-                                                data-bs-target="#modal_" data-id="{{ $branch['id'] }}"
-                                                data-name="{{ $branch['branch_name'] }}" data-code="{{ $branch['branch_code'] }}"
-                                                data-property_id="{{ $branch['property_id'] }}" data-description="{{ $branch['description'] }}">
+                                                data-bs-target="#modal_" data-id="{{ $property['id'] }}"
+                                                data-name="{{ $property['property_name'] }}" data-code="{{ $property['property_code'] }}"
+                                                data-description="{{ $property['description'] }}">
                                                 <i class="fe fe-edit"></i>
                                             </button>
                                         </td>
@@ -83,35 +81,24 @@
         <div class="modal-dialog modal-lg modal-dialog-centered text-center" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">Branches</h6><button aria-label="Close" class="btn-close"
+                    <h6 class="modal-title">Property</h6><button aria-label="Close" class="btn-close"
                         data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body text-start">
-                    <form action="{{ route('branch.addProcess') }}" method="POST" class="needs-validation" novalidate>
+                    <form action="{{ route('property.addProcess') }}" method="POST" class="needs-validation" novalidate>
                         @csrf
                         <input type="text" class="form-control" name="id" id="id" hidden>
                         <div class="form-group">
                             <label for="role">Name</label>
                             <input type="text" class="form-control" id="name" name="name"
-                                placeholder="Enter The Branch Name" required>
-                            <div class="invalid-feedback">Please Enter the Branch Name.</div>
+                                placeholder="Enter The Property Name" required>
+                            <div class="invalid-feedback">Please Enter the Property Name.</div>
                         </div>
                         <div class="form-group">
                             <label for="role">Code</label>
                             <input type="text" class="form-control" id="code" name="code"
-                                placeholder="Enter The branch Code" required>
-                            <div class="invalid-feedback">Please Enter the Branch Code.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Property</label>
-                            <select class="form-control select2-show-search form-select" data-placeholder="Choose Property"
-                                name="property" id="property" required>
-                                <option label="Choose Property"></option>
-                                @foreach ($properties as $property)
-                                    <option value="{{ $property['id'] }}">{{ $property['property_name'] }}</option>
-                                @endforeach
-                            </select>
-                            <div class="invalid-feedback">Please Select the Property.</div>
+                                placeholder="Enter The Property Code" required>
+                            <div class="invalid-feedback">Please Enter the Property Code.</div>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
@@ -151,29 +138,24 @@
             $('#id').val('');
             $('#name').val('');
             $('#code').val('');
-            $('#property').val('');
             $('#description').val('');
 
             // values get from attributes
             let id=$(this).attr("data-id");
             let name=$(this).attr("data-name");
             let code=$(this).attr("data-code");
-            let property=$(this).attr("data-property_id");
             let description=$(this).attr("data-description");
 
             // all values set to modal
             $('#id').val(id);
             $('#name').val(name);
             $('#code').val(code);
-            // $("#property option[value='"+property+"']").attr("selected",true);
-            $('#property').val(property);
             $('#description').val(description);
 
             // reset button attributes set
             $('#reset').attr("data-id", id);
             $('#reset').attr("data-name", name);
             $('#reset').attr("data-code", code);
-            $('#reset').attr("data-property_id", property);
             $('#reset').attr("data-description", description);
         });
 
@@ -185,14 +167,12 @@
             $('#id').val('');
             $('#name').val('');
             $('#code').val('');
-            $('#property').val('');
             $('#description').val('');
 
             // reset button attributes remove
             $('#reset').removeAttr("data-id");
             $('#reset').removeAttr("data-name");
             $('#reset').removeAttr("data-code");
-            $('#reset').removeAttr("data-property_id");
             $('#reset').removeAttr("data-description");
 
         });
@@ -205,21 +185,18 @@
             $('#id').val('');
             $('#name').val('');
             $('#code').val('');
-            $('#property').val('');
             $('#description').val('');
 
             // values get from attributes
             let id=$(this).attr("data-id");
             let name=$(this).attr("data-name");
             let code=$(this).attr("data-code");
-            let property=$(this).attr("data-property_id");
             let description=$(this).attr("data-description");
 
             // all values set to modal
             $('#id').val(id);
             $('#name').val(name);
             $('#code').val(code);
-            $('#property').val(property);
             $('#description').val(description);
         });
     </script>
