@@ -37,7 +37,7 @@ Route::get('/index', [IndexController::class, 'index'])->name('index');
 
 
 
-// edited by kiruththigan 5/7/2022
+// edited by kiruththigan 5/7/2022-checked
 
 // role
 Route::get('/role-showall', [RoleController::class, 'showall'])->name('role.showall');
